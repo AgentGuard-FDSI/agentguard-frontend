@@ -25,7 +25,6 @@ Requisitos: [Node.js](https://nodejs.org/) 20 o superior (`node -v`) y la API co
 
 1. En `agentguard-andimarket`, arranca la API:
 
-        set ANDIMARKET_CLAVE_DEMO=demo2026
         python -m andimarket.api
 
 2. En este repositorio:
@@ -33,8 +32,8 @@ Requisitos: [Node.js](https://nodejs.org/) 20 o superior (`node -v`) y la API co
         npm install
         npm run dev
 
-3. Abre http://localhost:5173 e inicia sesión con un usuario de `andimarket/directorio.py` y la clave
-   de `ANDIMARKET_CLAVE_DEMO`.
+3. Abre http://localhost:5173 e inicia sesión con un usuario de `andimarket/directorio.py`. Todos usan
+   la clave `demo2026` (se cambia con `ANDIMARKET_CLAVE_DEMO` en el `.env` de `agentguard-andimarket`).
 
 En desarrollo, Vite reenvía `/api` a `http://127.0.0.1:8000`, así que no hace falta configurar CORS. Para
 otra dirección, copia `.env.example` a `.env` y cambia `VITE_API_PROXY`.

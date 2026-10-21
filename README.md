@@ -5,9 +5,7 @@ La interfaz web del proyecto AgentGuard. Consume la API de
 para mostrar el agente de ANDIMARKET con AgentGuard (Config. B) y compararlo, lado a lado, con el mismo
 agente sin control (Config. A).
 
-React, TypeScript, Vite y Tailwind. Sigue el mockup aprobado en el Avance 3 (paleta del equipo y tipografía
-Aptos, con Segoe UI como respaldo donde Aptos no está instalada).
-
+React, TypeScript, Vite y Tailwind.
 ## Pantallas
 
 | Pestaña | Qué muestra |
@@ -32,11 +30,7 @@ Requisitos: [Node.js](https://nodejs.org/) 20 o superior (`node -v`) y la API co
         npm install
         npm run dev
 
-3. Abre http://localhost:5173 e inicia sesión con un usuario de `andimarket/directorio.py`. Todos usan
-   la clave `demo2026` (se cambia con `ANDIMARKET_CLAVE_DEMO` en el `.env` de `agentguard-andimarket`).
-
-En desarrollo, Vite reenvía `/api` a `http://127.0.0.1:8000`, así que no hace falta configurar CORS. Para
-otra dirección, copia `.env.example` a `.env` y cambia `VITE_API_PROXY`.
+3. Abre http://localhost:5173 e inicia sesión con un usuario de `andimarket/directorio.py`.
 
 ## Demostración de la aprobación humana (HITL)
 

@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos base y piezas repetidas del mockup aprobado (botones, campos, paneles, etiquetas). */
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+  body {
+    @apply bg-bg font-sans text-[14px] leading-[1.45] text-fg antialiased;
+  }
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+    color: inherit;
+  }
+  button:not(:disabled) {
+    cursor: pointer;
+  }
+  :focus-visible {
+    outline: 2px solid theme("colors.brand.DEFAULT");
+    outline-offset: 2px;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply m-0 font-semibold;
+    text-wrap: balance;
+  }
+  h1 {
+    @apply text-[20px];
+  }
+  h2 {
+    @apply text-[17px];
+  }
+  h3 {
+    @apply text-[14px];
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+}
+
+@layer components {
+  .wordmark {
+    @apply font-brand font-bold tracking-[.05em];
+  }
+  .wordmark span {
+    @apply text-brand-2;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-line-2 bg-surface-2 px-3.5 py-2 font-medium transition-colors hover:border-brand disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .btn-primary {
+    @apply border-brand bg-brand font-semibold text-bg hover:bg-brand-hover;
+  }
+  .btn-ok {
+    @apply border-allow-bd bg-allow-bg text-allow;
+  }
+  .btn-no {
+    @apply border-block-bd bg-block-bg text-block;
+  }
+  .btn-sm {
+    @apply px-[11px] py-[5px] text-[12.5px];
+  }
+  .btn-ghost {
+    @apply bg-transparent;
+  }
+
+  .input {
+    @apply w-full rounded-lg border border-line-2 bg-bg px-3 py-2.5 outline-none placeholder:text-fg-3 focus:border-brand;
+  }
+
+  .panel {
+    @apply min-w-0 rounded-xl border border-line bg-surface shadow-panel;
+  }
+  .panel-h {
+    @apply flex items-center justify-between gap-2.5 border-b border-line px-4 py-[11px];
+  }
+
+  .chip {
+    @apply rounded-full border border-line-2 bg-bg px-[11px] py-1 text-[12.5px] text-fg-2 transition-colors hover:border-brand hover:text-fg disabled:opacity-60;
+  }
+  .chip[aria-pressed="true"] {
+    @apply border-brand bg-brand-bg text-fg;
+  }
+
+  .seg {
+    @apply inline-flex gap-[3px] rounded-[9px] border border-line bg-bg p-[3px];
+  }
+  .seg button {
+    @apply rounded-md border-0 bg-transparent px-3 py-[5px] text-[13px] text-fg-2;
+  }
+  .seg button[aria-pressed="true"] {
+    @apply bg-surface-2 text-fg;
+    box-shadow: inset 0 0 0 1px theme("colors.line.2");
+  }
+
+  .dot {
+    @apply inline-block h-2.5 w-2.5 flex-none rounded-full;
+  }
+}
